@@ -4,3 +4,6 @@
 * GCD  
     Running time: O(log(a + b))
     Be careful: a % b follows the sign of a
+
+* FFT
+    Running time: O(nlogn)
