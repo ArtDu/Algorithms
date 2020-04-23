@@ -1,6 +1,8 @@
-// based on problem
-// https://codeforces.com/gym/100166/attachments
-
+/*
+based on problem
+https://codeforces.com/gym/100166/attachments
+O(V^3)
+*/
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -27,8 +29,9 @@ void floyd(int n) {
 
 int main() {
 
-    freopen("floyd.in", "r", stdin);
-    freopen("floyd.out", "w", stdout);
+    // for problem on codeforces
+    // freopen("floyd.in", "r", stdin);
+    // freopen("floyd.out", "w", stdout);
 
     ios_base::sync_with_stdio(0);
     cin.tie(0);
