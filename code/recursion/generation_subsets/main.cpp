@@ -1,3 +1,25 @@
+/*
+ * take or not
+ * O(2^n)
+ *
+ *                              {1,2,3}
+ *                    search(3)
+ *                              {1,2}
+ *           search(2)
+ *                              {1,3}
+ *                    search(3)
+ *                              {1}
+ * search(1)
+ *                              {2,3}
+ *                    search(3)
+ *                              {2}
+ *           search(2)
+ *                              {3}
+ *                    search(3)
+ *                              {}
+ * */
+
+
 #include <bits/stdc++.h>
 
 using namespace std;
