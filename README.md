@@ -1,6 +1,5 @@
 ### Различные алгоритмы для личного пользования
 
-
 for speed:  
 ```bash
 g++ a.cpp -o a -std=c++17 -Wshadow -Wall -O2 -Wno-unused-result
@@ -26,6 +25,12 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
+
+    ll t;
+    cin >> t;
+    while(t--) {
+        
+    }
     
     return 0;
 }
