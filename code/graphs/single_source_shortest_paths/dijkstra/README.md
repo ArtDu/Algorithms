@@ -9,8 +9,11 @@ If we use linear array for find min in dist array.
 For each V we find minimum in dist list by linear search = V * V.
 Cause we look each edge = E.
 
+Time complexity: O(V * logE + E * logE)
+If we use priority_queue 
+
 Time complexity: O(E * logV)
-If we binary heap
+If we use binary heap
 E - we look each edge in graph and execute decrease_key
 LogV - decrease_key operation in binary heap
 
