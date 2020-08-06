@@ -10,16 +10,8 @@ using namespace std;
 
 using ll = long long;
 
-ll n, q, x;
+ll n, q;
 vec<ll> tree;
-
-void add(ll k, ll x) {
-    k += n;
-    tree[k] += x;
-    for (k /= 2; k >= 1; k /= 2) {
-        tree[k] = tree[2 * k] + tree[2 * k + 1];
-    }
-}
 
 void upd(ll k, ll x) {
     k += n;
@@ -48,17 +40,34 @@ int main() {
 
     cin >> n >> q;
 
-    tree.resize(2 * n + 5);
-    for (ll i = 1; i <= n; ++i) {
-        cin >> x;
-        upd(i, x);
+    vec<ll> v(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> v[i];
     }
-    ll op, a, b;
-    for (ll i = 0; i < q; ++i) {
-        cin >> op >> a >> b;
+
+    ll i = 1;
+    while (i < n) {
+        i *= 2;
+    }
+    n = i;
+
+
+    tree.resize(2 * n + 5);
+    for (i = 0; i < v.size(); ++i) {
+        upd(i, v[i]);
+    }
+
+    ll op, a, b, x;
+    for (i = 0; i < q; ++i) {
+        cin >> op;
         if (op == 1) {
-            upd(a, b);
+            cin >> a >> x;
+            a--;
+            upd(a, x);
         } else {
+            cin >> a >> b;
+            a--;
+            b--;
             cout << sum(a, b) << "\n";
         }
     }
