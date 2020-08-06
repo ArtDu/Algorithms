@@ -5,10 +5,6 @@ using namespace std;
 typedef long long ll;
 const ll MAXX = 1e15;
  
-bool cmp(pair<ll, ll> &lhs, pair<ll, ll> &rhs) {
-    return lhs.first < rhs.first;
-}
- 
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);

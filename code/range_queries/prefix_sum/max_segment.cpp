@@ -1,13 +1,16 @@
+//https://cses.fi/problemset/task/1643/
 #include <iostream>
 
 using namespace std;
 
-const int MAXN = 300500;
-const int MAXV = 1000000050;
-long pref[MAXN];
+using ll = long long;
 
-int n, a;
-long mx, mn;
+const ll MAXN = 2 * 1e5 + 5;
+const ll MAXV = 1e15;
+ll pref[MAXN];
+
+ll n, a;
+ll mx, mn;
 
 int main() {
 
