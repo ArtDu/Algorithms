@@ -26,4 +26,12 @@ c(2) = 0, c(5) = 1, c(7) = 2
 ```
 
 ![](img/diff_arr.png)
+
+```c++
+void upd_range(ll a, ll b, ll u) {
+    add(a, u);
+    add(b + 1, -u);
+}
+```
+
 ![](img/diff_arr_add.png)
