@@ -23,7 +23,8 @@ void add(ll k, ll x) {
 
 void upd_range(ll a, ll b, ll u) {
     add(a, u);
-    add(b + 1, -u);
+    if(b + 1 < n)
+        add(b + 1, -u);
 }
 
 ll sum(ll a, ll b) {
@@ -45,22 +46,34 @@ int main() {
 
     cin >> n >> q;
 
-    tree.resize(2 * n + 5);
     v.resize(n + 5);
-    for (ll i = 1; i <= n; ++i) {
+    for (int i = 1; i <= n; ++i) {
         cin >> v[i];
-        ll diff = v[i] - v[i - 1];
-        add(i, diff);
     }
+
+    ll i = 1;
+    while (i <= n) {
+        i *= 2;
+    }
+    n = i;
+
+    tree.resize(2*n + 5);
+    for (i = 1; i < v.size(); ++i) {
+        ll diff = v[i] - v[i - 1];
+        add(i - 1, diff);
+    }
+
     ll op, a, b, u;
-    for (ll i = 0; i < q; ++i) {
+    for (i = 0; i < q; ++i) {
         cin >> op;
         if (op == 1) {
             cin >> a >> b >> u;
+            --a; --b;
             upd_range(a, b, u);
         } else {
             cin >> a;
-            cout << sum(1, a) << "\n";
+            --a;
+            cout << sum(0, a) << "\n";
         }
     }
     return 0;
