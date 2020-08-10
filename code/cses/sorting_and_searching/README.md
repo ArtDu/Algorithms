@@ -28,6 +28,7 @@ https://cses.fi/problemset/task/1629
 7. *[Sum of Two Values](./sum_of_two_values.cpp)  
 https://cses.fi/problemset/task/1640   
 //two pointers -- from begin and end
+    ![](img/sum_of_two.png)
 
 8. [Maximum Subarray Sum](./maximum_subarray_sum.cpp)  
 https://cses.fi/problemset/task/1643  
@@ -67,19 +68,36 @@ https://cses.fi/problemset/task/1631
 
 12. [Sum of Three Values](./sum_of_three_values.cpp)  
 https://cses.fi/problemset/task/1641  
-//Fix one val. Get two val by two pointers algo from left.
+//fixed one val. Get two val by two pointers algo from left.
 
 12. [Sum of Four Values](./sum_of_four_values.cpp)  
 https://cses.fi/problemset/task/1642  
-//Fix two val. Get other two between first two.
+//fixed two val. Get other two between first two.
 
 12. *[Nearest Smaller Values](./nearest_smaller_values.cpp)  
+[simple approach](./nearest_smaller_values_stack.cpp)  
 https://cses.fi/problemset/task/1645  
 //sort by val and run from left to right and push idx to set
+    ```
+    or approach from book
+    use stack 
+    
+    At each array position, while the top element is bigger than
+    the current element we remove elements from the stack,
+    or the stack is empty. 
+    
+    Then, we report that the top
+    element is the nearest smaller element of the current element,
+    or if the stack is empty, there is no such element.
+    
+    Finally, we add the current element to the stack.
+    ```
+    ![](img/nse.png)
 
 12. [Subarray Sums I](./subarray_sums_1.cpp)  
 https://cses.fi/problemset/task/1660  
 //two pointers + get plus(from right) or get minus val(from left)
+    ![](img/subarray_sum.png)
 
 12. [Subarray Sums II](./subarray_sums_2.cpp)  
 https://cses.fi/problemset/task/1661  
