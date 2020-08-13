@@ -1,5 +1,9 @@
 ### Fenwick tree
 
+upd: O(logn)  
+sum/min: O(logn)  
+memory: n
+
 ```c++
 p(k) = k & -k
 Выделяет младший единичный бит
@@ -13,3 +17,4 @@ p(k) = k & -k
 ![sum](img/sum.png)
 
 ![add](img/add.png)
+

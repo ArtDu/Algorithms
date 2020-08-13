@@ -1,5 +1,9 @@
 ### Segment tree -- дерево отрезков
 
+upd: O(logn)
+sum/min/etc: O(logn)
+memory: 4n
+
 ![](img/add.png)
 ![](img/sum.png)
 
@@ -32,6 +36,15 @@ void upd_range(ll a, ll b, ll u) {
     add(a, u);
     add(b + 1, -u);
 }
+
+void get_point(ll a){
+    sum(0, a)
+}
 ```
 
 ![](img/diff_arr_add.png)
+
+
+##### Max subarray
+
+prefix -- suffix approach 

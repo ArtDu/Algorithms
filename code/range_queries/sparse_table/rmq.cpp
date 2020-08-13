@@ -47,7 +47,7 @@ int main() {
         cin >> a >> b;
         sz = b - a + 1;
         sz = log[sz];
-        cout << min(st[sz][a], st[sz][b - (1 << sz) + 1]) << "\n";
+        cout << min(st[sz][a], st[sz][b - (1LL << sz) + 1]) << "\n";
     }
 
 
