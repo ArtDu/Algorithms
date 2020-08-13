@@ -122,7 +122,7 @@ https://cses.fi/problemset/task/1750
     ``` 
     
 12. **[Planets Queries II](./planets_queries_2.cpp)  
-https://cses.fi/problemset/task/1750  
+https://cses.fi/problemset/task/1160  
     ```
     successor/functional graph + scc
     ```
