@@ -101,7 +101,17 @@ https://cses.fi/problemset/task/1660
 
 12. [Subarray Sums II](./subarray_sums_2.cpp)  
 https://cses.fi/problemset/task/1661  
-//(prefix sum) map[sum] = vector of end's ids + hint with lower_bound
+    [simple solution:](./subarray_sums_2_simple.cpp)
+    ```
+    map[prefsum] = count of segments[0, r] with prefsum
+    map[0] = 1
+    for i in n:
+        prefsum += a[i]
+        ans += map[prefsum - sum]
+        map[prefsum]++
+    
+    ```
+    //(prefix sum) map[sum] = vector of end's ids + hint with lower_bound
 
 12. [Subarray Divisibility](./subarray_divisibility.cpp)  
 https://cses.fi/problemset/task/1662  

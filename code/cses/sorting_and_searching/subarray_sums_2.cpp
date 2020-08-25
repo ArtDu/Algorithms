@@ -8,17 +8,7 @@ const ll MAXX = 1e6;
 #define P pair
 #define F first
 #define S second
- 
-struct class_cmp {
-    bool operator()(const P<ll, ll> &lhs, const P<ll, ll> &rhs) const {
-        return lhs.F > rhs.F && lhs.S > rhs.S;
-    }
-};
- 
-bool cmp(pair<ll, ll> &lhs, pair<ll, ll> &rhs) {
-    return lhs.F > rhs.F || lhs.S > rhs.S;
-}
- 
+
  
 int main() {
     ios_base::sync_with_stdio(false);
