@@ -1,7 +1,7 @@
-docs:
-https://www.geeksforgeeks.org/dijkstras-algorithm-for-adjacency-list-representation-greedy-algo-8/
-problem:
-https://practice.geeksforgeeks.org/problems/shortest-path-from-1-to-n/0
+docs:  
+https://www.geeksforgeeks.org/dijkstras-algorithm-for-adjacency-list-representation-greedy-algo-8/  
+problem:  
+https://practice.geeksforgeeks.org/problems/shortest-path-from-1-to-n/0  
 
 #### Complexity
 Time Complexity: O(V^2) = O((V * V) + E) 
