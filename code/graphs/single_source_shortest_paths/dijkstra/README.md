@@ -33,4 +33,6 @@ If we use fibonacci heap
                 visited[v] = true
                 q.push(v)
      
-    
+##### All shortest paths by one pass in special problem  
+[task](docs/4.png)  
+[](all_shortest_path_in_one_pass.cpp)
