@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if ! g++ main.cpp -o correct -std=c++17 -Wshadow -Wall -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG; then
+if ! g++ correct.cpp -o correct -std=c++17 -Wshadow -Wall -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG; then
     echo "ERROR: Failed to compile file."
     exit 1
 fi
@@ -12,10 +12,10 @@ fi
 
 
 mkdir -p tests
-#if ! python3 test_gen.py ; then
-#    echo "ERROR: Failed to python generate tests."
-#    exit 1
-#fi
+if ! python3 test_gen.py ; then
+    echo "ERROR: Failed to python generate tests."
+    exit 1
+fi
 
 for test_file in `ls tests/*.t`; do
     answer_file="${test_file%.*}"
