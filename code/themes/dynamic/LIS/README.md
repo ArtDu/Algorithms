@@ -28,3 +28,7 @@ Auxiliary Space: O(n)
                 if d[i] > maximum:
                     maximum = d[i]
     return maximum              
+
+### NlogN solution
+
+    dp[l] = min{ai}, на котором заканчивается Возрастающая Последовательность длины l
